@@ -1,0 +1,52 @@
+= Bob the Builder
+Alexander (Sascha) Klein <alexander.klein@codecentric.de>
+2016-06-23
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+
+// Introduction to Bob
+
+== Bob the Builder
+
+image::Bob.gif[role=centered]
+
+include::aboutMe.adoc[]
+
+[[Domain_chapterBlue]]
+== Bobs project
+include::domain.adoc[]
+
+[[BuilderPattern_chapterBlue]]
+== Builder Pattern
+
+[[Java_chapterOrange]]
+== Java Builder Pattern
+include::javabuilder.adoc[]
+
+[[Groovy_chapterOrange]]
+== Groovy Builder Pattern
+include::groovybuilder.adoc[]
+
+[[Handcraft_chapterOrange]]
+== Handcraft
+image::Bob1.gif[role=noframe]
+include::handcraft.adoc[]
+
+[[Plant_chapterOrange]]
+== Using a plant
+image::Bob2.gif[role=noframe]
+include::plant.adoc[]
+
+[[Factory_chapterOrange]]
+== Factory scale
+image::Bob3.gif[role=noframe]
+include::factory.adoc[]
+
+[[Misc_chapterOrange]]
+== Miscellaneous
+include::misc.adoc[]
+
+include::questions.adoc[]
+

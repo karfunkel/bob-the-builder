@@ -1,0 +1,77 @@
+
+== Using a plant
+
+==== groovy.util.BuilderSupport
+
+== Using a plant
+
+* Scaffolding
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=plant1]
+----
+
+== Using a plant
+
+* Adding details
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=plant2]
+----
+
+== Using a plant
+
+* Roofs and storages
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=plant3]
+----
+
+== Using a plant
+
+* Roofs and storages
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=main3]
+----
+
+== Using a plant
+
+* Material as a node
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=plant4]
+----
+
+== Using a plant
+
+* Material as a node
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=main4]
+----
+
+== Using a plant
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=plant5]
+----
+
+== Using a plant
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Plant.groovy[tags=main5]
+----
+

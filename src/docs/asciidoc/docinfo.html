@@ -1,0 +1,89 @@
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $("section").each(function () {
+            if (!$(this).children("h1").length && !$(this).hasClass("stack"))
+                $(this).append("<div class='cc-footer'> <div class='cc-logo'/> </div>");
+        });
+    });
+</script>
+
+<style>
+    #java-builder-pattern .highlight,
+    #groovy-builder-pattern .highlight,
+    #handcraft-2 .highlight,
+    #handcraft-4 .highlight,
+    #handcraft-6 .highlight,
+    #handcraft-8 .highlight,
+    #handcraft-11 .highlight,
+    #using-a-plant-2 .highlight,
+    #using-a-plant-3 .highlight,
+    #using-a-plant-6 .highlight,
+    #using-a-plant-4 .highlight {
+        font-size: 0.45em;
+        line-height: 1.3em;
+    }
+
+    #java-builder-pattern-2 .highlight,
+    #groovy-builder-pattern-2 .highlight,
+    #handcraft .highlight,
+    #handcraft-7 .highlight,
+    #handcraft-13 .highlight,
+    #handcraft-14 .highlight,
+    #using-a-plant .highlight,
+    #using-a-plant-5 .highlight,
+    #using-a-plant-7 .highlight,
+    #using-a-plant-8 .highlight,
+    #using-a-plant-9 .highlight,
+    #factory-scale-2 .highlight,
+    #factory-scale-4 .highlight,
+    #factory-scale-6 .highlight,
+    #factory-scale-10 .highlight,
+    #factory-scale-11 .highlight,
+    #factory-scale-8 .highlight,
+    #temperature .highlight,
+    #temperature-2 .highlight,
+    #temperature-3 .highlight,
+    #ringing-the-bell .highlight,
+    #ringing-the-bell-2 .highlight,
+    #linking-doors-2 .highlight,
+    #linking-doors-3 .highlight,
+    #linking-doors-4 .highlight,
+    #linking-doors-5 .highlight,
+    #linking-doors-6 .highlight,
+    #linking-doors-7 .highlight,
+    #untouched .highlight,
+    #xxx {
+        font-size: 0.42em;
+        line-height: 1.2em;
+    }
+
+    #using-a-plant h3,
+    #factory-scale h3 {
+        margin-top: 20%;
+    }
+
+    #Handcraft_chapterOrange img {
+        background: none;
+        border: medium none;
+        box-shadow: none;
+        margin-top: 7%;
+        margin-left: 4%;
+    }
+
+    #Plant_chapterOrange img {
+        background: none;
+        border: medium none;
+        box-shadow: none;
+        margin-top: 10%;
+        margin-left: 2%;
+    }
+
+    #Factory_chapterOrange img {
+        background: none;
+        border: medium none;
+        box-shadow: none;
+        margin-top: 0;
+        margin-left: 1%;
+    }
+</style>

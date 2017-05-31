@@ -1,0 +1,41 @@
+
+== Domain
+
+* House
++
+[source, groovy]
+----
+include::{sourcedir}/bob/v1/Parts.groovy[tags=house]
+----
+
+[%step]
+* Material
++
+[source, groovy]
+----
+include::{sourcedir}/bob/v1/Parts.groovy[tags=material]
+----
+
+== Domain
+* Roof
++
+[source, groovy]
+----
+include::{sourcedir}/bob/v1/Parts.groovy[tags=roof]
+----
+
+== Domain
+* Level
++
+[source, groovy]
+----
+include::{sourcedir}/bob/v1/Parts.groovy[tags=level]
+----
+
+[%step]
+* Room
++
+[source, groovy]
+----
+include::{sourcedir}/bob/v1/Parts.groovy[tags=room]
+----

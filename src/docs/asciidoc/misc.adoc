@@ -1,0 +1,234 @@
+
+== Temperature
+
+* Collecting data externally
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/FactoryTemperature.groovy[tags=temperature2]
+----
+
+== Temperature
+
+* Attribute Delegates
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/FactoryTemperature.groovy[tags=temperature1]
+----
+
+== Temperature
+
+* RoomFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/Factory.groovy[tags=roomFactory]
+----
+
+== Temperature
+
+* Transparent nodes
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/FactoryTemperature.groovy[tags=temperature4]
+----
+
+== Temperature
+
+* Using transparent nodes
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/FactoryTemperature.groovy[tags=temperature3]
+----
+[%step]
+* TemperatureFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/temperature/Factory.groovy[tags=temperatureFactory]
+----
+
+== Temperature
+
+* Result
++
+[source, groovy]
+----
+Room Temperatures: [
+    Bedroom:55,
+    Childrens room:65,
+    Laundry:55,
+    Cellar:50,
+    Food storage:40,
+    Store room:50
+]
+----
+
+== Ringing the bell
+
+* Taking control over the Closure
++
+[source, groovy]
+----
+include::{sourcedir}/bob/bell/FactoryBell.groovy[tags=bell1]
+----
++
+[source, groovy]
+----
+include::{sourcedir}/bob/bell/FactoryBell.groovy[tags=bell2]
+----
+
+== Ringing the bell
+
+* BellFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/bell/Factory.groovy[tags=BellFactory]
+----
+
+== Linking Doors
+
+* Door instance
++
+[source, groovy]
+----
+@Canonical
+class Door {
+    Room one
+    Room two
+}
+----
+
+== Linking Doors
+
+[source, groovy]
+----
+include::{sourcedir}/bob/doors/FactoryDoors.groovy[tags=door2]
+----
+
+== Linking Doors
+
+[source, groovy]
+----
+include::{sourcedir}/bob/doors/Factory.groovy[tags=RoomFactory]
+----
+
+== Linking Doors
+
+* DoorFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/doors/FactoryDoors.groovy[tags=door1]
+----
++
+[source, groovy]
+----
+include::{sourcedir}/bob/doors/Factory.groovy[tags=DoorFactory]
+----
+
+== Linking Doors
+
+* LevelFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/doors/Factory.groovy[tags=LevelFactory]
+----
+
+== Linking Doors
+
+* Result
++
+[source, groovy]
+----
+{
+  <House> material: null, roof: null, number: 1
+  level   : [ {
+                 <Level> floor: 1nd floor, rooms: [
+                   { <Room> name: Bedroom, rooms: [],
+                       doors: [ <Door> room: Bedroom, room: Childrens room ]
+                   },
+                   {
+                     <Room> name: Childrens room, rooms: [],
+                       doors: [ <Door> room: Bedroom, room: Childrens room ]
+                   }
+                 ]
+               },
+               {
+                 <Level> floor : Ground floor, rooms: [
+                   { <Room> name: Living room, rooms: [],
+                       doors: [ <Door> room: Living room, room: Kitchen ]
+                   },
+                   { <Room> name: Kitchen, rooms: [],
+                       doors: [ <Door> room: Living room, room: Kitchen ]
+                   }
+                 ]
+               },
+----
+
+== Linking Doors
+
+* Result
++
+[source, groovy]
+----
+               {
+                 <Level> floor: Basement, rooms: [
+                   { <Room> name: Laundry, rooms: [],
+                       doors: [ <Door> room: Laundry, room: Food storage,
+                                <Door> room: Laundry, room: Store room ]
+                   },
+                   { <Room> name: Cellar, rooms: [
+                       { <Room> name: Food storage, rooms: [],
+                           doors: [ <Door> room: Laundry, room: Food storage ]
+                       },
+                       { <Room> name: Store room, rooms: [],
+                           doors: [ <Door> room: Laundry, room: Store room ]
+                       }
+                     ], doors: []
+                   }
+                 ]
+               }
+             ]
+}
+----
+
+== Untouched
+
+* groovy.util.Factory
++
+[source, groovy]
+----
+void onFactoryRegistration(FactoryBuilderSupport builder, String name, String groupName)
+----
+
+[%step]
+* groovy.util.FactoryBuilderSupport
++
+[source, groovy]
+----
+void registerExplicitProperty(String name, Closure getter, Closure setter)
+
+void registerExplicitMethod(String name, Closure closure)
+----
+
+* {nbsp}
++
+[source, groovy]
+----
+Closure addPreInstantiateDelegate(Closure delegate)
+
+Closure addPostInstantiateDelegate(Closure delegate)
+
+Closure addPostNodeCompletionDelegate(Closure delegate)
+----
+
+
+
+
+

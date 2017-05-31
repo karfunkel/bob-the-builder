@@ -1,0 +1,51 @@
+
+== Java Builder Pattern
+
+[source, groovy]
+----
+include::{sourcedir}/bob/java/JavaBuilder.groovy[tags=main]
+----
+
+== Java Builder Pattern
+[source, json]
+----
+{
+  <House>
+  material: Bricks, number: 1, roof: { <Roof> material: Tiles, color: Red }
+  level   : [ {
+                <Level> floor: 1nd floor, rooms: [
+                  { <Room> rooms: null, name: Bedroom },
+                  { <Room> rooms: null, name: Childrens room }
+                ]
+              },
+              {
+                <Level> floor: Ground floor, rooms: [
+                  { <Room> rooms: null, name: Living room},
+                  { <Room> rooms: null name: Kitchen}
+                ]
+              },
+              {
+                <Level> floor: Basement, rooms: [
+                  { <Room> rooms: null, name: Laundry },
+                  { <Room> name: Cellar,  rooms: [
+                      { <Room> rooms: null, name: Food storage },
+                      { <Room> rooms: null, name: Store room }
+                    ]
+                  }
+                ]
+              }
+            ]
+}
+----
+
+== @Builder
+
+* House
++
+[source, groovy]
+----
+include::{sourcedir}/bob/java/Parts.groovy[tags=house]
+----
+
+[%step]
+* same with the other classes

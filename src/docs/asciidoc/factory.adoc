@@ -1,0 +1,100 @@
+
+== Factory scale
+
+==== groovy.util.FactoryBuilderSupport
+
+== Factory scale
+
+* Scaffolding
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory1]
+----
+
+[%step]
+* All methods starting with 'register' will be executed
+* Part after 'register' is used as group name
+[%step]
+** Group name is internally stored to be queried in your builder
+
+== Factory scale
+
+* Roofs
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory2]
+----
+
+== Factory scale
+
+* RoofFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory2f]
+----
+
+== Factory scale
+
+* Storages
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory3]
+----
+
+== Factory scale
+
+* LevelFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory3f]
+----
+
+== Factory scale
+
+* Material
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory4]
+----
+
+== Factory scale
+
+* MaterialFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory4f]
+----
+
+== Factory scale
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory51]
+----
+
+== Factory scale
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory52]
+----
+
+== Factory scale
+
+* RoomFactory
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Factory.groovy[tags=factory5f]
+----

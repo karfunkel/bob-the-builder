@@ -1,0 +1,197 @@
+
+== Handcraft
+
+* Scaffolding
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft1]
+----
+
+[%step]
+* Result
++
+[source, groovy]
+----
+{
+  <House> material: null, roof: null, number: 0, level: []
+}
+----
+
+== Handcraft
+
+* Adding details
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft2]
+----
+
+== Handcraft
+
+* Result
++
+[source, groovy]
+----
+{
+  <House> material: Bricks, roof: null, number: 1, level: []
+}
+----
+
+== Handcraft
+
+* Roofing
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft31]
+----
++
+...
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft3]
+----
+
+== Handcraft
+
+* Result
++
+[source, groovy]
+----
+{
+  <House> material: Bricks,
+          number: 1,
+          roof  : { <Roof> material: tiles, color: Red },
+          level : []
+}
+----
+
+== Handcraft
+
+* Refactoring
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft4r]
+----
+
+== Handcraft
+
+* Storing the context
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft41]
+----
+
+== Handcraft
+
+* Creating the stories
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft42]
+----
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft4main]
+----
+
+== Handcraft
+
+* Result
++
+[source, groovy]
+----
+{
+  <House> material : Bricks,
+          number : 1
+          roof   : { <Roof> material: tiles, color: Red },
+          level  : [
+                     { <Level> floor: 1nd floor, rooms: [] },
+                     { <Level> floor: Ground floor, rooms: [] },
+                     { <Level> floor: Basement, rooms: [] }
+                   ]
+}
+----
+
+== Handcraft
+
+* Material as a node
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft5]
+----
+
+== Handcraft
+
+* Result
++
+[source, groovy]
+----
+{
+  <House> material : Bricks,
+          number : 1
+          roof   : { <Roof> material: tiles, color: Red },
+          level  : [
+                     { <Level> floor: 1nd floor, rooms: [] },
+                     { <Level> floor: Ground floor, rooms: [] },
+                     { <Level> floor: Basement, rooms: [] }
+                   ]
+}
+----
+
+== Handcraft
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=main6]
+----
+
+== Handcraft
+
+* Building the rooms
++
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=handcraft6]
+----
+
+== Handcraft
+
+[source, groovy]
+----
+{
+  <House>
+  material: Bricks, number: 1, roof: { <Roof> material: Tiles, color: Red }
+  level   : [ {
+                <Level> floor: 1nd floor, rooms: [
+                  { <Room> rooms: null, name: Bedroom },
+                  { <Room> rooms: null, name: Childrens room }
+                ]
+              },
+              {
+                <Level> floor: Ground floor, rooms: [
+                  { <Room> rooms: null, name: Living room},
+                  { <Room> rooms: null name: Kitchen}
+                ]
+              },
+              {
+                <Level> floor: Basement, rooms: [
+                  { <Room> rooms: null, name: Laundry },
+                  { <Room> name: Cellar,  rooms: [
+                      { <Room> rooms: null, name: Food storage },
+                      { <Room> rooms: null, name: Store room }
+                    ]
+                  }
+                ]
+              }
+            ]
+}
+----

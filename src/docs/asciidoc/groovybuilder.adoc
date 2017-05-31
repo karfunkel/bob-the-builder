@@ -1,0 +1,59 @@
+
+== Groovy Builder Pattern
+[source, groovy]
+----
+include::{sourcedir}/bob/Handcraft.groovy[tags=main6]
+----
+
+== Groovy Builder Pattern
+[source, json]
+----
+{
+  <House>
+  material: Bricks, number: 1, roof: { <Roof> material: Tiles, color: Red }
+  level   : [ {
+                <Level> floor: 1nd floor, rooms: [
+                  { <Room> rooms: null, name: Bedroom },
+                  { <Room> rooms: null, name: Childrens room }
+                ]
+              },
+              {
+                <Level> floor: Ground floor, rooms: [
+                  { <Room> rooms: null, name: Living room},
+                  { <Room> rooms: null name: Kitchen}
+                ]
+              },
+              {
+                <Level> floor: Basement, rooms: [
+                  { <Room> rooms: null, name: Laundry },
+                  { <Room> name: Cellar,  rooms: [
+                      { <Room> rooms: null, name: Food storage },
+                      { <Room> rooms: null, name: Store room }
+                    ]
+                  }
+                ]
+              }
+            ]
+}
+----
+
+== Groovy Builder Pattern
+
+* General contract
++
+[source, groovy]
+----
+node(value?, attributes*) {
+    subnode(value?, attributes*) {
+        leaf(value?, attributes*)
+    }
+}
+----
+
+[%step]
+* node to create -> method-name
+* 0..1 values
+[%step]
+** often used as value for an important attribute
+* 0..n attributes
+* 0..1 Closure for subnodes
